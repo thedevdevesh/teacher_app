@@ -1,3 +1,4 @@
+// Update the existing student row
 const updatedRow = '<tr id="student_<%= @student.id %>">' +
   '<td><%= j @student.name %></td>' +
   '<td><%= j @student.subject %></td>' +
@@ -8,5 +9,8 @@ const updatedRow = '<tr id="student_<%= @student.id %>">' +
   '</td>' +
 '</tr>';
 
+// Replace the existing row with the updated row
 $(`#student_<%= @student.id %>`).replaceWith(updatedRow);
+
+// Hide the edit modal
 $('#editStudentModal<%= @student.id %>').modal('hide');
