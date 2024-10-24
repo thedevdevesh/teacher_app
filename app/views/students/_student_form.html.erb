@@ -1,0 +1,22 @@
+<%= form_with(model: student, local: false, remote: true, html: { id: "#{student.persisted? ? "edit_student_#{student.id}" : "new_student"}" }) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= f.label :subject %>
+    <%= f.text_field :subject, class: 'form-control' %>
+  </div>
+
+  <div>
+    <%= f.label :marks %>
+    <%= f.number_field :marks, class: 'form-control' %>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <%= f.submit student.persisted? ? "Save" : "Add", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
