@@ -1,0 +1,29 @@
+<!-- app/views/students/_student_row.html.erb -->
+<tr id="student_<%= student.id %>">
+  <td><%= student.name %></td>
+  <td><%= student.subject %></td>
+  <td><%= student.marks %></td>
+  <td class="text-center">
+    <%= link_to 'Edit', '#', class: 'btn btn-outline-dark', data: { toggle: 'modal', target: "#editStudentModal#{student.id}" } %>
+    <%= link_to 'Delete', student_path(student), method: :delete, 
+          data: { confirm: 'Are you sure you want to delete this student?' }, 
+          remote: true, class: 'btn btn-outline-danger ms-2' %>
+  </td>
+</tr>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editStudentModal<%= student.id %>" tabindex="-1" role="dialog" aria-labelledby="editStudentModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editStudentModalLabel">Edit Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'student_form', student: student %>
+      </div>
+    </div>
+  </div>
+</div>

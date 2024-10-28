@@ -1,2 +1,4 @@
-// Remove the student row from the table
-$(`#student_<%= @student.id %>`).remove();
+$('#student_<%= @student.id %>').remove();
+
+$('#flash-messages').html('<%= j render partial: "shared/flash_messages", locals: { flash_type: "success", message: "Student was successfully deleted." } %>');
+

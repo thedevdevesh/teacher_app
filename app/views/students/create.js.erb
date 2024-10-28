@@ -1,12 +1,10 @@
-const newRow = '<tr id="student_<%= @student.id %>">' +
-  '<td><%= j @student.name %></td>' +
-  '<td><%= j @student.subject %></td>' +
-  '<td><%= j @student.marks %></td>' +
-  '<td class="text-center">' +
-    '<%= j link_to "Edit", "#", class: "btn btn-outline-dark", data: { toggle: "modal", target: "#editStudentModal<%= @student.id %>" } %>' +
-    '<%= j button_to "Delete", student_path(@student), method: :delete, data: { confirm: "Are you sure you want to delete this student?", remote: true, class: "btn btn-outline-danger ms-2" } %>' +
-  '</td>' +
-'</tr>';
+<% if @student.persisted? %>
+  $('#students-table-body').append('<%= j render partial: "student_row", locals: { student: @student } %>');
+  $('#addStudentModal').modal('hide');
+  $('#new_student')[0].reset();
 
-$('#students-table-body').append(newRow);
-$('#addStudentModal').modal('hide');
+  $('#flash-messages').html('<%= j render partial: "shared/flash_messages", locals: { flash_type: "success", message: "Student was successfully created." } %>');
+
+<% else %>
+  $('#flash-messages').html('<%= j render partial: "shared/flash_messages", locals: { flash_type: "danger", message: "Error creating student. Please try again." } %>');
+<% end %>
