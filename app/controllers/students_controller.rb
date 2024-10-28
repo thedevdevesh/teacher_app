@@ -27,7 +27,11 @@ class StudentsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    respond_to do |format|
+      format.json { render json: @student.slice(:name, :subject, :marks) }
+    end
+  end
 
   def update
     if @student.update(student_params)

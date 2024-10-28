@@ -1,17 +1,17 @@
-<%= form_with(model: student, local: false, remote: true, html: { id: "#{student.persisted? ? "edit_student_#{student.id}" : "new_student"}" }) do |f| %>
+<%= form_with(model: student, remote: true, html: { id: "#{student.persisted? ? "edit_student_#{student.id}" : "new_student"}" }) do |f| %>
   <div>
     <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.text_field :name, class: 'form-control', id: 'student_name' %>
   </div>
 
   <div>
     <%= f.label :subject %>
-    <%= f.text_field :subject, class: 'form-control' %>
+    <%= f.text_field :subject, class: 'form-control', id: 'student_subject' %>
   </div>
 
   <div>
     <%= f.label :marks %>
-    <%= f.number_field :marks, class: 'form-control' %>
+    <%= f.number_field :marks, class: 'form-control', id: 'student_marks' %>
   </div>
 
   <div class="modal-footer">
@@ -19,5 +19,3 @@
     <%= f.submit student.persisted? ? "Save" : "Add", class: 'btn btn-primary' %>
   </div>
 <% end %>
-
-

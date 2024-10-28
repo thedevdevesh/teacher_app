@@ -1,6 +1,7 @@
 <% if @student.persisted? %>
   $('#students-table-body').append('<%= j render partial: "student_row", locals: { student: @student } %>');
   $('#addStudentModal').modal('hide');
+
   $('#new_student')[0].reset();
 
   $('#flash-messages').html('<%= j render partial: "shared/flash_messages", locals: { flash_type: "success", message: "Student was successfully created." } %>');
