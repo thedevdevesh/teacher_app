@@ -1,9 +1,8 @@
 <% if @student.errors.blank? %>
   $('#student_<%= @student.id %>').replaceWith('<%= j render partial: "student_row", locals: { student: @student } %>');
-  $('#editStudentModal<%= @student.id %>').modal('hide');
 
   $('#flash-messages').html('<%= j render partial: "shared/flash_messages", locals: { flash_type: "success", message: "Student was successfully updated." } %>');
-
+  $('.close[data-dismiss="modal"]').trigger('click');
 <% else %>
   $('#flash-messages').html('<%= j render partial: "shared/flash_messages", locals: { flash_type: "danger", message: "Error updating student. Please try again." } %>');
 <% end %>

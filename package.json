@@ -9,6 +9,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.4",
     "bootstrap": "^5.3.3",
+    "css": "^3.0.0",
     "jquery": "^3.7.1",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
@@ -20,6 +21,6 @@
     "webpack-dev-server": "^3"
   },
   "scripts": {
-  "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
   }
 }
