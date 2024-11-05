@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StudentsController < ApplicationController
   before_action :authenticate_teacher!
   before_action :set_student, only: %i[edit update destroy]
@@ -14,16 +16,12 @@ class StudentsController < ApplicationController
     @student = current_teacher.students.build(student_params)
     if @student.save
       flash[:notice] = 'Student was successfully created.'
-      respond_to do |format|
-        format.html { redirect_to students_path }
-        format.js   # This will render create.js.erb
-      end
     else
       flash.now[:alert] = 'Error creating student. Please try again.'
-      respond_to do |format|
-        format.html { redirect_to students_path }
-        format.js   # This will render create.js.erb
-      end
+    end
+    respond_to do |format|
+      format.html { redirect_to students_path }
+      format.js   # This will render create.js.erb
     end
   end
 
@@ -36,16 +34,12 @@ class StudentsController < ApplicationController
   def update
     if @student.update(student_params)
       flash[:notice] = 'Student was successfully updated.'
-      respond_to do |format|
-        format.html { redirect_to students_path }
-        format.js   # This will render update.js.erb
-      end
     else
       flash.now[:alert] = 'Error updating student. Please try again.'
-      respond_to do |format|
-        format.html { redirect_to students_path }
-        format.js   # This will render update.js.erb
-      end
+    end
+    respond_to do |format|
+      format.html { redirect_to students_path }
+      format.js   # This will render update.js.erb
     end
   end
 
