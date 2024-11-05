@@ -1,5 +1,6 @@
 <% if @student.persisted? %>
   $('#students-table-body').append('<%= j render partial: "student_row", locals: { student: @student } %>');
+   $('body').append('<%= j render partial: "edit_modal", locals: { student: @student } %>');
   
   $('#new_student')[0].reset();
 

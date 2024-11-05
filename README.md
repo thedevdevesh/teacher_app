@@ -1,24 +1,64 @@
-# README
+# TeacherApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TeacherApp is a Ruby on Rails application designed for managing student information. This project utilizes various technologies and gems to provide a robust and interactive user experience.
 
-Things you may want to cover:
+## Table of Contents
 
-* Ruby version
+- [TeacherApp](#teacherapp)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
 
-* System dependencies
+## Features
 
-* Configuration
+- User authentication with Devise
+- Responsive UI using Bootstrap
+- CRUD operations for student management
+- AJAX-based interactions for a seamless experience
 
-* Database creation
+## Technologies
 
-* Database initialization
+- Ruby 3.2.1
+- Rails 6.1.4
+- PostgreSQL
+- Bootstrap 5
+- jQuery
+- Webpacker
 
-* How to run the test suite
+## Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+### Prerequisites
 
-* Deployment instructions
+Ensure you have the following installed on your machine:
 
-* ...
+- Ruby (version 3.2.1)
+- Rails (version 6.1.4)
+- PostgreSQL
+- Node.js and Yarn (for JavaScript dependencies)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your_username/teacher_app.git
+   cd teacher_app
+2. **Install gems:**
+   ```bash
+    bundle install
+
+3. **Install JavaScript dependencies:**
+   ```bash
+    yarn install
+4. **Initialize the database:**
+   ```bash
+    rails db:create
+    rails db:migrate
+
+5. **Running the Application:**
+   ```bash
+    rails server
+
+
