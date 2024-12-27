@@ -18,14 +18,28 @@ TeacherApp is a comprehensive Ruby on Rails application designed for educational
 
 ## Table of Contents
 
-- [Features](#features)
-- [Technologies](#technologies)
-- [System Requirements](#system-requirements)
-- [Setup and Installation](#setup-and-installation)
-- [Database Configuration](#database-configuration)
-- [Running the Application](#running-the-application)
-- [Testing](#testing)
-- [Project Structure](#project-structure)
+- [TeacherApp](#teacherapp)
+  - [Screenshots](#screenshots)
+    - [Teachers Login](#teachers-login)
+    - [Students List](#students-list)
+    - [Student Creation Form](#student-creation-form)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies](#technologies)
+    - [Core](#core)
+    - [Frontend](#frontend)
+    - [Authentication](#authentication)
+  - [System Requirements](#system-requirements)
+  - [Setup and Installation](#setup-and-installation)
+  - [Database Configuration](#database-configuration)
+  - [Running the Application](#running-the-application)
+  - [Testing](#testing)
+  - [Project Structure](#project-structure)
+  - [Tips for Development](#tips-for-development)
+  - [Production Deployment](#production-deployment)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Support](#support)
 
 ## Features
 
@@ -198,20 +212,3 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Support
 
 For support, please open an issue in the GitHub repository or contact the development team.
-2. **Install gems:**
-   ```bash
-    bundle install
-
-3. **Install JavaScript dependencies:**
-   ```bash
-    yarn install
-4. **Initialize the database:**
-   ```bash
-    rails db:create
-    rails db:migrate
-
-5. **Running the Application:**
-   ```bash
-    rails server
-
-
