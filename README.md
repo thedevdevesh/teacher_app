@@ -80,7 +80,7 @@ TeacherApp is a comprehensive Ruby on Rails application designed for educational
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your_username/teacher_app.git
+   git clone https://github.com/thedevdevesh/teacher_app.git
    cd teacher_app
    ```
 
